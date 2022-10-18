@@ -1,0 +1,236 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{A7C2CB66-540C-3CCA-A8ED-8130A72667EA}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>unit</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)bin\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)..\Temp\$(SolutionName)\$(ProjectName)\$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)bin\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)..\Temp\$(SolutionName)\$(ProjectName)\$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(SolutionDir)thirdparty\assimp-5.2.4;$(SolutionDir)thirdparty\assimp-5.2.4\include;$(SolutionDir)thirdparty\assimp-5.2.4\code;$(SolutionDir)thirdparty\gtest-1.7.0\include;$(SolutionDir)thirdparty\pugixml-1.12\include;$(SolutionDir)include\rapidjson-1.1.0;headercheck;models;models-nonbsd;other;regression;unit</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /bigobj</AdditionalOptions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4244</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <TreatWarningAsError>false</TreatWarningAsError>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_SILENCE_TR1_NAMESPACE_DEPRECATION_WARNING;_DEBUG;ASSIMP_BUILD_NO_M3D_IMPORTER;ASSIMP_BUILD_NO_M3D_EXPORTER;WIN32_LEAN_AND_MEAN;UNICODE;_UNICODE;ASSIMP_DOUBLE_PRECISION;ASSIMP_BUILD_NO_C4D_IMPORTER;RAPIDJSON_HAS_STDSTRING=1;RAPIDJSON_NOMEMBERITERATORCLASS;ASSIMP_TEST_MODELS_DIR="E:/hanwenzhi_code/assimp/backup/assimp-5.2.4/test/models";ASSIMP_TEST_MODELS_NONBSD_DIR="E:/hanwenzhi_code/assimp/backup/assimp-5.2.4/test/models-nonbsd";_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>libzlib.lib;libpugixml.lib;libgtest.lib;assimp.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)lib\$(Configuration)\</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <SubSystem>Console</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(SolutionDir)thirdparty\assimp-5.2.4;$(SolutionDir)thirdparty\assimp-5.2.4\include;$(SolutionDir)thirdparty\assimp-5.2.4\code;$(SolutionDir)thirdparty\gtest-1.7.0\include;$(SolutionDir)thirdparty\pugixml-1.12\include;$(SolutionDir)include\rapidjson-1.1.0;headercheck;models;models-nonbsd;other;regression;unit</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /bigobj</AdditionalOptions>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4244</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <TreatWarningAsError>false</TreatWarningAsError>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_SILENCE_TR1_NAMESPACE_DEPRECATION_WARNING;NDEBUG;ASSIMP_BUILD_NO_M3D_IMPORTER;ASSIMP_BUILD_NO_M3D_EXPORTER;WIN32_LEAN_AND_MEAN;UNICODE;_UNICODE;ASSIMP_DOUBLE_PRECISION;ASSIMP_BUILD_NO_C4D_IMPORTER;RAPIDJSON_HAS_STDSTRING=1;RAPIDJSON_NOMEMBERITERATORCLASS;ASSIMP_TEST_MODELS_DIR="E:/hanwenzhi_code/assimp/backup/assimp-5.2.4/test/models";ASSIMP_TEST_MODELS_NONBSD_DIR="E:/hanwenzhi_code/assimp/backup/assimp-5.2.4/test/models-nonbsd";_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>libzlib.lib;libpugixml.lib;libgtest.lib;assimp.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)lib\$(Configuration)\</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <SubSystem>Console</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="unit\CCompilerTest.c" />
+    <ClCompile Include="unit\Main.cpp" />
+    <ClCompile Include="unit\utSimd.cpp" />
+    <ClCompile Include="unit\utIOSystem.cpp" />
+    <ClCompile Include="unit\utIOStreamBuffer.cpp" />
+    <ClCompile Include="unit\utIssues.cpp" />
+    <ClCompile Include="unit\utAnim.cpp" />
+    <ClCompile Include="unit\AssimpAPITest.cpp" />
+    <ClCompile Include="unit\AssimpAPITest_aiMatrix3x3.cpp" />
+    <ClCompile Include="unit\AssimpAPITest_aiMatrix4x4.cpp" />
+    <ClCompile Include="unit\AssimpAPITest_aiQuaternion.cpp" />
+    <ClCompile Include="unit\AssimpAPITest_aiVector2D.cpp" />
+    <ClCompile Include="unit\AssimpAPITest_aiVector3D.cpp" />
+    <ClCompile Include="unit\MathTest.cpp" />
+    <ClInclude Include="unit\MathTest.h" />
+    <ClInclude Include="unit\RandomNumberGeneration.h" />
+    <ClCompile Include="unit\utBatchLoader.cpp" />
+    <ClCompile Include="unit\utDefaultIOStream.cpp" />
+    <ClCompile Include="unit\utFastAtof.cpp" />
+    <ClCompile Include="unit\utMetadata.cpp" />
+    <ClInclude Include="unit\SceneDiffer.h" />
+    <ClCompile Include="unit\SceneDiffer.cpp" />
+    <ClInclude Include="unit\UTLogStream.h" />
+    <ClCompile Include="unit\AbstractImportExportBase.cpp" />
+    <ClInclude Include="unit\TestIOSystem.h" />
+    <ClInclude Include="unit\TestModelFactory.h" />
+    <ClCompile Include="unit\utTypes.cpp" />
+    <ClCompile Include="unit\utVersion.cpp" />
+    <ClCompile Include="unit\utProfiler.cpp" />
+    <ClCompile Include="unit\utSharedPPData.cpp" />
+    <ClCompile Include="unit\utStringUtils.cpp" />
+    <ClCompile Include="unit\Common\utMesh.cpp" />
+    <ClCompile Include="unit\Common\utStandardShapes.cpp" />
+    <ClCompile Include="unit\Common\uiScene.cpp" />
+    <ClCompile Include="unit\Common\utLineSplitter.cpp" />
+    <ClCompile Include="unit\Common\utSpatialSort.cpp" />
+    <ClCompile Include="unit\Common\utAssertHandler.cpp" />
+    <ClCompile Include="unit\Common\utXmlParser.cpp" />
+    <ClCompile Include="unit\Common\utBase64.cpp" />
+    <ClCompile Include="unit\ImportExport\Assxml\utAssxmlImportExport.cpp" />
+    <ClCompile Include="unit\utLWSImportExport.cpp" />
+    <ClCompile Include="unit\utLWOImportExport.cpp" />
+    <ClCompile Include="unit\utSMDImportExport.cpp" />
+    <ClCompile Include="unit\utglTFImportExport.cpp" />
+    <ClCompile Include="unit\utglTF2ImportExport.cpp" />
+    <ClCompile Include="unit\utHMPImportExport.cpp" />
+    <ClCompile Include="unit\utIFCImportExport.cpp" />
+    <ClCompile Include="unit\utFBXImporterExporter.cpp" />
+    <ClCompile Include="unit\utImporter.cpp" />
+    <ClCompile Include="unit\ImportExport\utExporter.cpp" />
+    <ClCompile Include="unit\ut3DImportExport.cpp" />
+    <ClCompile Include="unit\ut3DSImportExport.cpp" />
+    <ClCompile Include="unit\utACImportExport.cpp" />
+    <ClCompile Include="unit\utAMFImportExport.cpp" />
+    <ClCompile Include="unit\utASEImportExport.cpp" />
+    <ClCompile Include="unit\utD3MFImportExport.cpp" />
+    <ClCompile Include="unit\utQ3DImportExport.cpp" />
+    <ClCompile Include="unit\utSTLImportExport.cpp" />
+    <ClCompile Include="unit\utXImporterExporter.cpp" />
+    <ClCompile Include="unit\utX3DImportExport.cpp" />
+    <ClCompile Include="unit\utDXFImporterExporter.cpp" />
+    <ClCompile Include="unit\utPMXImporter.cpp" />
+    <ClCompile Include="unit\utPLYImportExport.cpp" />
+    <ClCompile Include="unit\utObjImportExport.cpp" />
+    <ClCompile Include="unit\utObjTools.cpp" />
+    <ClCompile Include="unit\utOpenGEXImportExport.cpp" />
+    <ClCompile Include="unit\utSIBImporter.cpp" />
+    <ClCompile Include="unit\utBlenderIntermediate.cpp" />
+    <ClCompile Include="unit\utBlendImportAreaLight.cpp" />
+    <ClCompile Include="unit\utBlenderImportExport.cpp" />
+    <ClCompile Include="unit\utBlendImportMaterials.cpp" />
+    <ClCompile Include="unit\utBlenderWork.cpp" />
+    <ClCompile Include="unit\utBVHImportExport.cpp" />
+    <ClCompile Include="unit\utColladaExport.cpp" />
+    <ClCompile Include="unit\utColladaImportExport.cpp" />
+    <ClCompile Include="unit\utCSMImportExport.cpp" />
+    <ClCompile Include="unit\utB3DImportExport.cpp" />
+    <ClCompile Include="unit\utMDCImportExport.cpp" />
+    <ClCompile Include="unit\utAssbinImportExport.cpp" />
+    <ClCompile Include="unit\ImportExport\utAssjsonImportExport.cpp" />
+    <ClCompile Include="unit\ImportExport\utCOBImportExport.cpp" />
+    <ClCompile Include="unit\ImportExport\utOgreImportExport.cpp" />
+    <ClCompile Include="unit\ImportExport\utQ3BSPFileImportExport.cpp" />
+    <ClCompile Include="unit\ImportExport\utOFFImportExport.cpp" />
+    <ClCompile Include="unit\ImportExport\utNFFImportExport.cpp" />
+    <ClCompile Include="unit\ImportExport\utXGLImportExport.cpp" />
+    <ClCompile Include="unit\ImportExport\utMD2Importer.cpp" />
+    <ClCompile Include="unit\ImportExport\utMD5Importer.cpp" />
+    <ClCompile Include="unit\ImportExport\utMDLImporter.cpp" />
+    <ClInclude Include="unit\ImportExport\MDL\MDLHL1TestFiles.h" />
+    <ClCompile Include="unit\ImportExport\MDL\utMDLImporter_HL1_ImportSettings.cpp" />
+    <ClCompile Include="unit\ImportExport\MDL\utMDLImporter_HL1_Materials.cpp" />
+    <ClCompile Include="unit\ImportExport\MDL\utMDLImporter_HL1_Nodes.cpp" />
+    <ClCompile Include="unit\ImportExport\RAW\utRAWImportExport.cpp" />
+    <ClCompile Include="unit\ImportExport\Terragen\utTerragenImportExport.cpp" />
+    <ClCompile Include="unit\utMaterialSystem.cpp" />
+    <ClCompile Include="unit\utMatrix3x3.cpp" />
+    <ClCompile Include="unit\utMatrix4x4.cpp" />
+    <ClCompile Include="unit\utVector3.cpp" />
+    <ClCompile Include="unit\utImproveCacheLocality.cpp" />
+    <ClCompile Include="unit\utFixInfacingNormals.cpp" />
+    <ClCompile Include="unit\utGenNormals.cpp" />
+    <ClCompile Include="unit\utTriangulate.cpp" />
+    <ClCompile Include="unit\utTextureTransform.cpp" />
+    <ClCompile Include="unit\utRemoveRedundantMaterials.cpp" />
+    <ClCompile Include="unit\utRemoveVCProcess.cpp" />
+    <ClCompile Include="unit\utScaleProcess.cpp" />
+    <ClCompile Include="unit\utArmaturePopulate.cpp" />
+    <ClCompile Include="unit\utJoinVertices.cpp" />
+    <ClCompile Include="unit\utRemoveComments.cpp" />
+    <ClCompile Include="unit\utRemoveComponent.cpp" />
+    <ClCompile Include="unit\utVertexTriangleAdjacency.cpp" />
+    <ClCompile Include="unit\utSplitLargeMeshes.cpp" />
+    <ClCompile Include="unit\utFindDegenerates.cpp" />
+    <ClCompile Include="unit\utFindInvalidData.cpp" />
+    <ClCompile Include="unit\utLimitBoneWeights.cpp" />
+    <ClCompile Include="unit\utPretransformVertices.cpp" />
+    <ClCompile Include="unit\utScenePreprocessor.cpp" />
+    <ClCompile Include="unit\utTargetAnimation.cpp" />
+    <ClCompile Include="unit\utSortByPType.cpp" />
+    <ClCompile Include="unit\utSceneCombiner.cpp" />
+    <ClCompile Include="unit\utGenBoundingBoxesProcess.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
