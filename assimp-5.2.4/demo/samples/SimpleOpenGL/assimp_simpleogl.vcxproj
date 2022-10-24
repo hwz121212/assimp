@@ -110,7 +110,7 @@
   <ItemGroup>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="E:\hanwenzhi_code\assimp\backup\assimp-5.2.4\samples\SimpleOpenGL\Sample_SimpleOpenGL.c" />
+    <ClCompile Include="Sample_SimpleOpenGL.c" />
   </ItemGroup>
   <ItemGroup>
   </ItemGroup>
