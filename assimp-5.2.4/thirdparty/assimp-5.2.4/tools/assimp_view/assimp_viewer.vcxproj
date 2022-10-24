@@ -74,6 +74,10 @@
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
       <SubSystem>Windows</SubSystem>
     </Link>
+    <ResourceCompile>
+      <PreprocessorDefinitions>ASSIMP_BUILD_NO_OWN_ZLIB;WINAPI_FAMILY_PARTITION;WIN32;_WINDOWS;</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)thirdparty\assimp-5.2.4\include;$(SolutionDir)thirdparty\assimp-5.2.4\code;$(SolutionDir)thirdparty\zlib-1.2.12\include;$(SolutionDir)include\Microsoft_DirectX_SDK_February_2010</AdditionalIncludeDirectories>
+    </ResourceCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
@@ -101,8 +105,13 @@
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
       <SubSystem>Windows</SubSystem>
     </Link>
+    <ResourceCompile>
+      <PreprocessorDefinitions>ASSIMP_BUILD_NO_OWN_ZLIB;WINAPI_FAMILY_PARTITION;WIN32;_WINDOWS;</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)thirdparty\assimp-5.2.4\include;$(SolutionDir)thirdparty\assimp-5.2.4\code;$(SolutionDir)thirdparty\zlib-1.2.12\include;$(SolutionDir)include\Microsoft_DirectX_SDK_February_2010</AdditionalIncludeDirectories>
+    </ResourceCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ResourceCompile Include="assimp_view.rc" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AnimEvaluator.cpp" />
