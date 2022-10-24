@@ -1530,6 +1530,9 @@
     <ClInclude Include="include\assimp\Compiler\pstdint.h">
       <Filter>Compiler</Filter>
     </ClInclude>
+    <ClInclude Include="include\revision.h">
+      <Filter>include</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="AssetLib">
